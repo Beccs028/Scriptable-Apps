@@ -23,5 +23,6 @@ async function createWidget(items) {
     list.addSpacer()
     const label = list.addText(days+"")
     label.font = Font.boldSystemFont(24)
+    label.centerAlignText()
     return list
 }
