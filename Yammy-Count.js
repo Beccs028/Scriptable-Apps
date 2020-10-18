@@ -1,4 +1,7 @@
-let widget = await createWidget();
+let widget = await createWidget()
+if (!config.runsInWidget) {
+  await widget.presentSmall()
+}
 Script.setWidget(widget)
 Script.complete
 
@@ -7,10 +10,11 @@ async function createWidget(items) {
     var now = new Date()
     var distance = now - confession + (1000 * 60 * 60 * 24)
     var days = Math.floor(distance / (1000 * 60 * 60 * 24))
+    const gradient = new LinearGradient()
     gradient.locations = [0, 1]
     gradient.colors = [
-    new Color("111111"),
-    new Color("222222")
+        new Color("111111"),
+        new Color("222222")
     ]
     const list = new ListWidget()
     list.backgroundGradient = gradient
