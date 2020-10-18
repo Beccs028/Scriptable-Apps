@@ -13,12 +13,13 @@ async function createWidget(items) {
     const gradient = new LinearGradient()
     gradient.locations = [0, 1]
     gradient.colors = [
-        new Color("111111"),
-        new Color("222222")
+        new Color("152238"),
+        new Color("23395d")
     ]
     const list = new ListWidget()
     list.backgroundGradient = gradient
-    list.addText("Yammy Days")
+    const title = list.addText("Yammy")
+    title.font = Font.boldSystemFont(24)
     list.addSpacer()
     const label = list.addText(days+"")
     label.font = Font.boldSystemFont(24)
