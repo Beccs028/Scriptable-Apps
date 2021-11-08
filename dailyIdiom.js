@@ -17,7 +17,7 @@ let titleColour = Color.dynamic(new Color(titleColourLight),new Color(titleColou
 let textColour = Color.dynamic(new Color(textColourLight),new Color(textColourDark))
  
 // Gets everything
-let url = "https:// www.merriam-webster.com/word-of-the-day/"
+let url = "https://ltl-school.com/chinese-proverb-of-the-day/"
 let req = new Request(url)
 let html = await req.loadString()
  
