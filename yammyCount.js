@@ -7,7 +7,7 @@ Script.complete
 
 async function createWidget (items) {
   var confession = new Date('Jul 19, 2020')
-  var now = new Date('Dec 19, 2021')
+  var now = new Date()
 
   // calculate months
   var months = (now.getFullYear() - confession.getFullYear()) * 12
